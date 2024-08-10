@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Offers</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Great+Vibes&family=Libre+Caslon+Text:ital,wght@0,400;0,700;1,400&family=Pacifico&family=Permanent+Marker&family=Whisper&display=swap" rel="stylesheet">
+
+</head>
+<body>
+    <header>
+        <div class="container">
+           <div class="logo">
+               <img src="https://i.postimg.cc/kgNBcFtx/logo-removebg-preview-1.png" alt="Supermarket Logo">
+           </div>
+       <nav>
+           <ul id="menu">
+               
+           <input type="text" id="search-bar" placeholder="Search products...">
+               <li><a href="index.html">Home</a></li>
+               <li><a href="all-categories.html">Categories</a></li>
+               <li><a href="offers.html">Offers</a></li>
+               <li><a href="about.html">About Us</a></li>
+               <li><a href="contact.html">Contact Us</a></li>
+               <li><a href="cart.html"><i class="fa-solid fa-cart-shopping"></i></a><span id="cart-count" style="color: black;">0</span></li>
+           </ul>
+           
+       </nav> 
+
+<button id="menu-toggle">☰</button>
+       
+   </header>
+    
+    <main>
+        <section id="specials">
+            <h2 style="font-family: DM Serif Display">  Special Offers </h2>
+
+            <div class="specials-grid">
+                <div class="special">
+                    <img src="https://www.bigbasket.com/media/uploads/p/l/40281258_1-milky-mist-greek-yogurt-natural-high-protein-no-added-sugar.jpg" alt="">
+                    <h3>Milky Mist yogurt </h3>
+                    <button onclick="addToCart('Milky Mist yogurt', 150)">Add to Cart</button>
+                </div>
+                <div class="special">
+                    <img src="https://d1z88p83zuviay.cloudfront.net/ProductVariantThumbnailImages/ca9f32e8-5016-44ce-9edd-81449ed4d37e_425x425.jpg" alt="">
+                    <h3>Lindt Lindor Assorted </h3>
+                    <button onclick="addToCart('Lindt Lindor Assorted', 150)">Add to Cart</button>
+                </div>
+                <div class="special">
+                    <img src="https://d1z88p83zuviay.cloudfront.net/ProductVariantThumbnailImages/7478a1ca-08bf-42b3-88c4-6ee45a52d43a_425x425.jpg" alt="">
+                    <h3>
+                        Raspberry Imported Pack </h3>
+                    <button onclick="addToCart('Raspberry Imported Pack', 150)">Add to Cart</button>
+                </div>
+                <div class="special">
+                    <img src="https://d1z88p83zuviay.cloudfront.net/ProductVariantThumbnailImages/0cd9b895-a680-4248-baf6-15b1bd70aaf9_425x425.jpg" alt="">
+                    <h3>Keggs Organic Eggs Pack 6 pc </h3>
+                    <button onclick="addToCart('Keggs Organic Eggs Pack', 150)">Add to Cart</button>
+                </div>
+
+                <div class="special">
+                    <img src="https://encrypted-tbn1.gstatic.com/shopping?q=tbn:ANd9GcTWyc0-AKVu4sL5VvmuLhiegTaXXcf-voUX5UGvJTIcr8pnfCAoiKYFDbuwqIXkOOeEZAZXCq6PfQAOpAqmMPfS_vIMctWnBh61cs13qZdb7Mx4YN6ufLRV&usqp=CAE" alt="">
+                    <h3> Britannia Winkin Chocolate Milk Shake</h3>
+                    <button onclick="addToCart('Britannia Winkin Chocolate Milk Shake', 250)">Add to Cart</button>
+                </div>
+            </div>
+        </section>
+    </main>
+    
+    <footer>
+        <div class="footer-top container">
+            <h2 id="foot">You can’t stop time,<br> but you can save it!</h2>
+            <p >
+                Living in the city, there is never enough time to shop for groceries, pick-up supplies, grab food and wade through traffic on the way back home. 
+                How about we take care of all of the above for you? What if we can give you all that time back? 
+                Send packages across the city and get everything from food, groceries, medicines and pet supplies delivered right to your doorstep. 
+                From any store to your door, just make a list and we’ll make it disappear. Just enfinor It!
+            </p>
+        </div>
+        <div class="footer-bottom">
+            <div class="footer-section">
+                <img src="https://i.postimg.cc/kgNBcFtx/logo-removebg-preview-1.png" alt="Dunzo Logo" class="footer-logo">
+            </div>
+            <div class="footer-section">
+                <h3>ENFINOR</h3>
+                <ul>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="#">Jobs</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="#">Terms & Conditions</a></li>
+                    <li><a href="#">Privacy Policy</a></li>
+                    <li><a href="#">Enfinor for partner</a></li>
+                    <li><a href="#">Enfinor for business</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>SERVICEABLE CITIES</h3>
+                <ul>
+                    <li><a href="#">Bangalore</a></li>
+                    <li><a href="#">Pune</a></li>
+                    <li><a href="#">Gurgaon</a></li>
+                    <li><a href="#">Hyderabad</a></li>
+                    <li><a href="#">Delhi</a></li>
+                    <li><a href="#">Chennai</a></li>
+                    <li><a href="#">Mumbai</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>GET IN TOUCH</h3>
+                <ul>
+                    <li><a href="#">Email</a></li>
+                    <li><a href="#">Media Queries</a></li>
+                    <li><a href="#">Twitter</a></li>
+                    <li><a href="#">Facebook</a></li>
+                    <li><a href="#">Instagram</a></li>
+                    <li><a href="#">LinkedIn</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <img src="https://i.postimg.cc/d03QS3hs/Video-Preview-removebg-preview.png" alt="Scooter" class="footer-scooter">
+            </div>
+        </div>
+        <hr>
+        <div>
+            Copyright Emerinter web solution @ 2023 All Rights reserved
+        </div>
+    </footer>
+    
+    <script src="script.js"></script>
+</body>
+</html>
