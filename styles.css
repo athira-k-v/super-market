@@ -1384,16 +1384,16 @@ button:hover {
 
 @media (max-width: 768px) {
     table th, table td {
-        font-size: 14px;
+        font-size: 10px;
     }
 
     #total-amount, #checkout-container {
         text-align: center;
     }
 
-    button {
+    /* button {
         width: 100%;
-    }
+    } */
 }
 
 @keyframes fadeIn {

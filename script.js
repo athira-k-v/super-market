@@ -989,7 +989,7 @@ document.addEventListener('DOMContentLoaded', function () {
                     <td>${item.uom}</td>
                     <td>$${item.price.toFixed(2)}</td>
                     <td>$${item.totalPrice}</td>
-                    <td><button class="delete-item" data-index="${index}">Delete</button></td>
+                    <td><button class="delete-item" data-index="${index}"><i class="fa-solid fa-trash"></i></button></td>
                 `;
                 cartList.appendChild(tr);
             });
@@ -1329,7 +1329,6 @@ document.addEventListener('DOMContentLoaded', function () {
         loadCategories();
     }
 });
-
 
 
 
