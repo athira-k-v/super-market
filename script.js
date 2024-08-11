@@ -1447,3 +1447,41 @@ document.addEventListener('DOMContentLoaded', function () {
         menu.classList.toggle('show'); // Toggle the 'show' class on the menu
     });
 });
+
+
+
+
+
+
+
+
+
+// document.getElementById('menu-toggle').addEventListener('click', function() {
+//     this.classList.toggle('active');
+//     const menu = document.getElementById('menu');
+//     menu.style.display = menu.style.display === 'flex' ? 'none' : 'flex';
+// });
+
+
+
+
+
+
+
+
+// document.addEventListener('DOMContentLoaded', function() {
+//     var toggleButton = document.getElementById('menu-toggle');
+//     var menu = document.getElementById('menu');
+
+//     if (toggleButton) {
+//         toggleButton.addEventListener('click', function() {
+//             menu.classList.toggle('hidden');
+//         });
+//     }
+// });
+
+
+
+
+
+
