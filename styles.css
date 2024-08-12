@@ -1601,7 +1601,7 @@ h2 {
     }
 }
 
-@media (max-width: 480px) {
+@media (max-width: 500px) {
     .category-container {
         grid-template-columns: repeat(1, 1fr); /* 2 columns for very small screens */
     }
