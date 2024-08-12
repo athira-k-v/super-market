@@ -1603,12 +1603,12 @@ h2 {
 
 @media (max-width: 480px) {
     .category-container {
-        grid-template-columns: repeat(2, 1fr); /* 2 columns for very small screens */
+        grid-template-columns: repeat(1, 1fr); /* 2 columns for very small screens */
     }
 
     .category {
         height: 150px; /* Adjust height for smaller screens */
-        width: 145px; /* Adjust width for smaller screens */
+        width: 150px; /* Adjust width for smaller screens */
     }
 
     .category-info h3 {
