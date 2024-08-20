@@ -2431,6 +2431,39 @@ a {
 
 
 
+/* General styling for navbar */
+.navbar {
+    padding: 1rem 0;
+}
+
+/* Shadow at the bottom of the fixed header */
+.navbar-light.bg-white {
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+}
+
+/* Search bar styling */
+.search-bar .input-group {
+    max-width: 400px;
+    width: 100%;
+}
+
+/* Responsive adjustments */
+@media (max-width: 991.98px) {
+    .location-selector.d-lg-flex {
+        display: flex !important;
+        margin-bottom: 1rem; /* Adds spacing between items in toggle menu */
+    }
+
+    .search-bar {
+        flex-grow: 1;
+        max-width: 100%;
+    }
+}
+
+/* Add padding to avoid content being hidden behind the fixed header */
+body {
+    padding-top: 70px; /* Adjust based on navbar height */
+}
 
 
 
