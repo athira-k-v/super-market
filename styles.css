@@ -2426,7 +2426,14 @@ a {
 
 
 
-
+#shop-again{
+    background-color: #0056b3;
+}
+#purchase-button{
+    margin-right:40px ;
+    margin-top: 30px;
+    gap: 30px;
+}
 
 
 
