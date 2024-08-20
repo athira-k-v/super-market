@@ -174,7 +174,7 @@ button {
 
 
 /* Categories section styles */
-.categories {
+/* .categories {
     padding: 20px;
 }
 .categories h2 {
@@ -220,7 +220,7 @@ button {
     color: inherit;
 }
 
-
+ */
 
 
 
@@ -1915,6 +1915,9 @@ image-section
 @media (max-width: 400px) {
     .image-box a {
         flex: 1 1 calc(100% - 10px); /* One image per row on very small screens */
+    }
+    .image-box{
+        margin-left: 50px;
     }
 }
 
