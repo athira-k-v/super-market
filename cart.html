@@ -17,82 +17,96 @@
 
 </head>
 <body>
-    <nav class="navbar navbar-expand-lg bg-body-tertiary">
-        <div class="container-fluid container">
-          <a class="navbar-brand" href="index.html">SuperMarket</a>
-      
-          <!-- Location Selection -->
-          <div class="location-selector ms-3 d-flex align-items-center">
-            <i class="bi bi-geo-alt-fill me-2"></i>
-            <a href="#" class="nav-link p-0" data-bs-toggle="modal" data-bs-target="#locationModal"> <i style="color: black;" class="fa-solid fa-location-dot"></i> 
-              Set Location <i class="bi bi-chevron-down ms-1"></i>
-            </a>
-          </div>
-      
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-          </button>
-          
     
-          <nav class="navbar bg-body-tertiary">
-            <div class="container-fluid">
-              <form class="d-flex" role="search">
-                <div class="input-group">
-                  <span class="input-group-text" id="basic-addon1">
-                    <i class="fa-solid fa-magnifying-glass"></i>
-                  </span>
-                  <input class="form-control" type="search" placeholder="Search" aria-label="Search">
-                </div>
-              </form>
-            </div>
-          </nav>
-          
-    
-    
-          <div class="collapse navbar-collapse" id="navbarNav">
-            <ul class="navbar-nav ms-auto">
-              <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="cart.html"><i class="fa-solid fa-cart-shopping"></i></a>
-              </li>
-              <!-- Add more nav items as needed -->
-            </ul>
-          </div>
-        </div>
-      </nav>
-    
-      <div class="modal fade" id="locationModal" tabindex="-1" aria-labelledby="locationModalLabel" aria-hidden="true">
-        <div class="modal-dialog modal-lg">
-          <div class="modal-content">
-            <div class="modal-header">
-              <h5 class="modal-title" id="locationModalLabel"> Add Your Location</h5>
-              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-            </div>
-            <div class="modal-body text-center">
-              <div class="input-group mb-3">
-                <span class="input-group-text" id="basic-addon1">
-                  <i class="bi bi-search"></i>
-                </span>
-                <input type="text" class="form-control" placeholder="Search for location, area, lat long, plus code, etc." aria-label="Search">
-              </div>
-              <a style="text-decoration: none;" href="#" class="d-block mb-4">
-                <i  style="color: black;" class="fa-solid fa-location-dot"></i> Use current location
-              </a>
-    
-                  <img  src="https://cdni.iconscout.com/illustration/premium/thumb/delivery-man-riding-motorcycle-searching-delivery-location-5064952-4226825.png?f=webp" alt="Location Illustration" class="img-fluid">
-        
-        
-        </div>
-          </div>
-        </div>
-      </div>
 
     
+
+  <header>
 
    
+    <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top shadow">
+        <div class="container-fluid">
+            <!-- Brand -->
+            <a class="navbar-brand" href="index.html">Supermarket</a>
+
+            <!-- Location -->
+            <div class="location-selector ms-3 d-none d-lg-flex align-items-center">
+                <i class="fa-solid fa-location-dot me-2" style="color: #17a2b8;"></i>
+                <a href="#" class="nav-link p-0" data-bs-toggle="modal" data-bs-target="#locationModal">
+                    Kochi, Kerala <i class="fa-solid fa-chevron-down ms-1"></i>
+                </a>
+            </div>
+
+            <!-- Search Bar (Visible on Large Screens) -->
+            <div class="search-bar ms-auto d-none d-lg-block">
+                <form class="d-flex">
+                    <input class="form-control me-2" type="search" placeholder="Search for products..." aria-label="Search">
+                    <button class="btn" type="submit"><i class="fa-solid fa-magnifying-glass"></i></button>
+                </form>
+            </div>
+
+            <!-- Toggler for mobile view -->
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <!-- Cart and Login/Signup (Always Visible) -->
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto align-items-center">
+                    <!-- Login -->
+                    
+
+                    <!-- Cart -->
+                    <li class="nav-item text-center">
+                        <a class="nav-link" href="cart.html">
+                            <i class="fa-solid fa-cart-shopping" style="font-size: 1.5rem;"></i><br>
+                            Cart
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+</header>
+
+<!-- Search Bar (Visible on Mobile) -->
+<div class="search-bar d-block d-lg-none mt-2">
+    <div class="container">
+        <form class="d-flex">
+            <input class="form-control me-2" type="search" placeholder="Search for products..." aria-label="Search">
+            <button class="btn btn-outline-success" type="submit">Search</button>
+        </form>
+    </div>
+</div>
+
+<!-- Location Modal -->
+<div class="modal fade" id="locationModal" tabindex="-1" aria-labelledby="locationModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="locationModalLabel">Add Your Location</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body text-center">
+                <div class="input-group mb-3">
+                    <span class="input-group-text" id="basic-addon1">
+                        <i class="fa-solid fa-search"></i>
+                    </span>
+                    <input type="text" class="form-control" placeholder="Search for location, area, lat long, plus code, etc." aria-label="Search">
+                </div>
+                <a style="text-decoration: none;" href="#" class="d-block mb-4">
+                    <i style="color: black;" class="fa-solid fa-location-dot"></i> Use current location
+                </a>
+                <img src="https://cdni.iconscout.com/illustration/premium/thumb/delivery-man-riding-motorcycle-searching-delivery-location-5064952-4226825.png?f=webp" alt="Location Illustration" class="img-fluid">
+            </div>
+        </div>
+    </div>
+</div>
+
   
 
 
-  <main>
+  <main style="padding-top: 70px;">
     <section class="cart">
         <div class="cart-content">
             <div class="cart-items">
