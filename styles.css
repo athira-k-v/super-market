@@ -21,12 +21,12 @@ section {
     padding: 2em;
 }
 
-.navbar-brand{
+/* .navbar-brand{
     font-family: "Matemasie", sans-serif;
     font-weight: 400;
     font-style: normal;
     padding: 20px;
-}
+} */
 .navbar{
     padding: 20px;
 }
@@ -123,7 +123,18 @@ button {
 
 .navbar-brand {
     font-weight: bold;
-    font-size: 1.5rem;
+    font-size: 20px;
+padding: 20px;
+    font-family: "Arial Black", Gadget, sans-serif;
+font-size: 31px;
+letter-spacing: -1.4px;
+word-spacing: -1.4px;
+color: #117314;
+font-weight: 700;
+text-decoration: none solid rgb(12, 91, 6);
+font-style: normal;
+font-variant: small-caps;
+text-transform: uppercase;
 }
 
 .location-selector {
