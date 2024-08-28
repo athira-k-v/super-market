@@ -247,6 +247,9 @@ h2 {
     #deals h2 {
         font-size: 20px;
     }
+    #deals h3 {
+        font-size: 10px;
+    }
 }
 
 
@@ -371,8 +374,12 @@ h2 {
        border-radius: 1px;
        font-size: 6px;
     }
+    
     #specials h2 {
         font-size: 20px;
+    }
+    #specials h3 {
+        font-size: 12px;
     }
 }
 
@@ -664,129 +671,103 @@ h2 {
 
  /* contact us page  */
 
-.contact-form-container {
+ .contact-us {
     display: flex;
-    justify-content: center;
+    flex-direction: column;
     align-items: center;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    background-size: cover;
-    width: 75%; /* Set width to 75% of the viewport */
-    max-width: 1200px; /* Optional max-width for very large screens */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 60px;
+}
+
+.contact-container {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    max-width: 1000px; /* Adjusted for a smaller container */
+    margin: 0 auto;
     border-radius: 8px;
-    overflow: hidden; /* Keeps everything neat */
-    flex-wrap: wrap; /* Allow wrapping on smaller screens */
+    overflow: hidden;
+}
+
+.contact-image {
+    flex: 1;
+
+    overflow: hidden;
+     margin-top: 120px; 
+    
+}
+
+.contact-image img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
 }
 
 .contact-form {
-    background-color: #fffcfc;
+    flex: 1;
     padding: 20px;
-    width: 70%; /* Adjusted width to leave space for the image */
-    margin-right: 20px; /* Spacing between form and image */
-    margin-top: 200px;
+    background-color: #f9f9f9;
 }
 
-.image-panel {
-    width: 30%; /* Image takes up the remaining space */
-    display: flex;
-    justify-content: center;
-    align-items: center;
+.contact-form h2 {
+    margin-top: 0;
+    font-size: 34px;
+    color: #333;
 }
-
-.image-panel img {
-    width: 100%;
-    height: auto; /* Maintain aspect ratio */
-    border-radius: 8px;
-}
-
-.contact-form h2, .contact-form p {
+.contact-form p {
+    margin-top: 0;
+    font-size: 20px;
+    color: #333;
     text-align: center;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
     color: #333;
 }
 
-.contact-form p {
-    color: #666;
-}
-
-.input-box {
-    margin-bottom: 10px;
-    display: flex;
-    gap: 10px;
-}
-
-.input-box input, .contact-form textarea {
+.form-group input,
+.form-group textarea {
     width: 100%;
     padding: 10px;
-    border: 2px solid #ccc;
+    border: 1px solid #ccc;
     border-radius: 4px;
-    box-sizing: border-box;
 }
 
-.contact-form textarea {
-    height: 100px;
-    resize: none; /* Users can't change the size */
+.form-group textarea {
+    resize: vertical;
 }
 
-.contact-form button {
-    background-color: #007BFF;
-    color: white;
+button {
+    padding: 10px 15px;
+    background-color: #007bff;
+    color: #fff;
     border: none;
-    padding: 10px 20px;
-    cursor: pointer;
     border-radius: 4px;
-    width: 100%;
-    margin-top: 10px;
+    cursor: pointer;
+    font-size: 16px;
 }
 
-.contact-form button:hover {
+button:hover {
     background-color: #0056b3;
 }
 
-/* Responsive adjustments */
+/* Responsive Styles */
 @media (max-width: 768px) {
-    .contact-form-container {
-        flex-direction: column; /* Stack form and image vertically */
-        width: 90%; /* Increase width for smaller screens */
+    .contact-container {
+        flex-direction: column;
     }
 
+    .contact-image,
     .contact-form {
-        width: 100%; /* Full width on small screens */
-        margin-right: 0; /* Remove right margin */
-        margin-bottom: 20px; /* Add bottom margin to separate from image */
-    }
-
-    .image-panel {
-        width: 100%; /* Full width on small screens */
+        max-width: 100%;
     }
 }
-
-@media (max-width: 480px) {
-    .contact-form-container {
-        padding: 10px; /* Reduce padding for very small screens */
-        
-    }
-
-    .contact-form {
-        padding: 15px;
-        margin-top: 510px;
-    }
-
-    .input-box {
-        flex-direction: column; /* Stack inputs vertically */
-        gap: 5px; /* Reduce gap between inputs */
-    }
-
-    .contact-form button {
-        padding: 10px; /* Adjust button padding */
-    }
-}
-
-
-
-
 
 
 
@@ -1322,7 +1303,7 @@ a {
     background-color: #0056b3;
 }
 #purchase-button{
-    margin-right:40px ;
+    margin-left:50px ;
     margin-top: 30px;
     gap: 30px;
 }
@@ -1654,7 +1635,7 @@ body {
 }
 
 /* Responsive Styles */
-@media (max-width: 768px) {
+@media (max-width: 1065px) {
     .cart-content {
         flex-direction: column;
     }
