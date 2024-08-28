@@ -1311,6 +1311,10 @@ a {
 
 
 
+
+
+
+
 /* General styling for navbar */
 .navbar {
     padding: 1rem 0;
@@ -1337,6 +1341,7 @@ a {
     .search-bar {
         flex-grow: 1;
         max-width: 100%;
+      
     }
 }
 
@@ -1504,6 +1509,8 @@ body {
         background-color: #286090;
     }
 }
+
+
 
 
 /* cart section  */
@@ -2119,3 +2126,6 @@ body {
 
 
 
+.navbar{
+    
+}
