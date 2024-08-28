@@ -282,7 +282,7 @@ h2 {
 
 #specials {
     padding: 20px;
-    background-color: #fff;
+  
     text-align: center;
 }
 
@@ -299,14 +299,14 @@ h2 {
 }
 
 .special {
-    background-color: #f9f9f9;
+   
     border: 1px solid #ddd;
     border-radius: 20px;
     padding: 10px;
     text-align: center;
     transition: box-shadow 0.3s ease;
     width: 200px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+
     border: none;
 }
 
