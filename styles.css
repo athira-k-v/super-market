@@ -150,7 +150,7 @@ h2 {
 
 #deals {
     padding: 20px;
-    background-color: #fff;
+ 
     text-align: center;
 }
 
@@ -163,18 +163,17 @@ h2 {
 .deals-grid {
     display: flex;
     justify-content: center;
-    gap: 40px;
+    gap: 20px;
     flex-wrap: wrap;
 }
 
 .deal {
-    background-color: #f9f9f9;
-    border-radius: 20px;
-    padding: 10px;
+  
+    border-radius: 10px;
+ 
     text-align: center;
     transition: box-shadow 0.3s ease;
     width: 200px; /* Reduced width */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     border: none;
 }
 
@@ -184,12 +183,12 @@ h2 {
     height: 120px;
     object-fit: cover;
     border-bottom: 1px solid #ddd;
-    border-radius: 20px 20px 0 0;
+    border-radius: 1px 20px 0 0;
 }
 
 .deal h3 {
     margin: 10px 0;
-    font-size: 1.2em;
+    font-size: 1em;
 }
 .deal h4{
     margin: 10px 0;
@@ -202,7 +201,7 @@ h2 {
     color: #fff;
     background-color: #3ac844;
     border: none;
-    border-radius: 10px;
+    border-radius: 1px;
     cursor: pointer;
     transition: background-color 0.3s ease;
 }
@@ -228,9 +227,10 @@ h2 {
         width: 100%; /* Stack items on very small screens */
         border-radius: 1px;
         padding: 1px;
+       
     }
     .deal {
-        width: calc(100% / 3 - 40px); /* Adjusting for smaller screens */
+        width: calc(100% / 3 - 20px); /* Adjusting for smaller screens */
     }
     .deal img {
         width: 50px;
@@ -294,7 +294,7 @@ h2 {
 .specials-grid {
     display: flex;
     justify-content: center;
-    gap: 50px;
+    gap: 10px;
     flex-wrap: wrap;
 }
 
@@ -346,10 +346,11 @@ h2 {
 }
 
 
-@media (max-width: 768px) {
+@media (max-width: 568px) {
     .special{
         width: calc(100% / 4 - 50px); /* Adjusting for smaller screens */
     }
+  
 }
 
 @media (max-width: 480px) {
@@ -360,7 +361,7 @@ h2 {
         padding: 1px;
     }
     .special {
-        width: calc(100% / 3 - 40px); /* Adjusting for smaller screens */
+        width: calc(100% / 3 - 20px); /* Adjusting for smaller screens */
     }
     .special img {
         width: 50px;
@@ -1434,7 +1435,7 @@ body {
         align-items: center;
         justify-content: flex-start;
         margin: 10px 0;
-        margin-left:-4px ;
+        margin-left:12px ;
        
     }
 
@@ -2125,7 +2126,3 @@ body {
 
 
 
-
-.navbar{
-    
-}
