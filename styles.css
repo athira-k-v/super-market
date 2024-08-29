@@ -54,95 +54,62 @@ h2 {
     text-align: center;
     margin-bottom: 20px;
 }
-
+/* General styles for the category container */
 .category-container {
     display: grid;
-    grid-template-columns: repeat(5, 1fr); /* 5 columns in a row */
-    gap: 20px; 
-    margin-bottom: 20px;
+    grid-template-columns: repeat(4, 1fr); /* 4 columns by default */
+    gap: 16px; /* Space between categories */
 }
 
+/* Category box styles */
 .category {
-    background: #fff; /* White background for category box */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    overflow: hidden;
-    text-align: center; /* Center text and image */
+    text-align: center;
+    border: 1px solid #ddd;
     padding: 10px;
-    height: 200px; /* Adjust height */
-    width: 200px; /* Ensure width matches height for a perfect circle */
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    position: relative;
-    margin: 0 auto; /* Center category boxes */
-    border-radius: 5px;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+    transition: transform 0.2s;
 }
 
 .category img {
-    width: 100%;
-    height: 100%; /* Cover the container */
-    object-fit: cover; /* Ensure images cover the area without distortion */
-}
-
-.category-info {
-    position: absolute;
-    bottom: 10px;
-    left: 0;
-    right: 0;
-    text-align: center;
-    padding: 0 10px;
-    border-radius: 10px; 
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
 }
 
 .category-info h3 {
-    margin: 0;
-    font-size: 20px; /* Adjust font size as needed */
-    color: #333; /* Darker color for the text */
+    margin: 10px 0 0;
+    font-size: 18px;
 }
 
-.view-all {
-    text-align: center;
-    margin-top: 20px;
+/* Hover effect for categories */
+.category:hover {
+    transform: scale(1.05);
 }
 
-.view-all a {
-    color: #007bff; /* Link color */
-    text-decoration: none;
-    font-size: 16px;
-}
-
-.view-all a:hover {
-    text-decoration: underline;
-}
-
-@media (max-width: 1024px) {
+/* Media Query for Mobile View */
+@media (max-width: 767px) {
     .category-container {
-        grid-template-columns: repeat(4, 1fr); /* 4 columns for medium screens */
+        grid-template-columns: repeat(3, 1fr); /* 3 columns on screens <= 767px */
     }
 }
 
-@media (max-width: 768px) {
+/* Media Query for very small screens like mobile 320px */
+@media (max-width: 480px) {
     .category-container {
-        grid-template-columns: repeat(3, 1fr); /* 3 columns for small screens */
+      
+        grid-template-columns: repeat(3, 1fr); /* 3 columns on screens <= 480px */
     }
 }
 
-@media (max-width: 500px) {
+/* Optional: Adjustments for small screens */
+@media (max-width: 340px) {
     .category-container {
-        grid-template-columns: repeat(1, 1fr); /* 2 columns for very small screens */
-        padding-left: 30px;
-    }
-
-    .category {
-        height: 150px; /* Adjust height for smaller screens */
-        width: 150px; /* Adjust width for smaller screens */
-        
-    }
-
-    .category-info h3 {
-        font-size: 16px; /* Adjust font size for smaller screens */
+    
+        grid-template-columns: repeat(2, 1fr); /* 2 columns on screens <= 320px */
     }
 }
+
 
 
 /* deals section  */
