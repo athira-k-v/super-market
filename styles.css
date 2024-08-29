@@ -54,6 +54,7 @@ h2 {
     text-align: center;
     margin-bottom: 20px;
 }
+
 /* General styles for the category container */
 .category-container {
     display: grid;
@@ -97,19 +98,30 @@ h2 {
 /* Media Query for very small screens like mobile 320px */
 @media (max-width: 480px) {
     .category-container {
-      
+   
+        margin-left:-41px;
         grid-template-columns: repeat(3, 1fr); /* 3 columns on screens <= 480px */
     }
 }
 
 /* Optional: Adjustments for small screens */
-@media (max-width: 340px) {
+@media (max-width: 320px) {
     .category-container {
-    
-        grid-template-columns: repeat(2, 1fr); /* 2 columns on screens <= 320px */
+        gap: 2px;
+       margin-left: -29px;
+       
+        grid-template-columns: repeat(3, 1fr); /* 2 columns on screens <= 320px */
+    }
+    .catagory{
+        padding: 2px;
+    }
+    .category img{
+        height: 30px;
+    }
+    .catagory-info h3{
+        font-size: 8px;
     }
 }
-
 
 
 /* deals section  */
@@ -500,21 +512,40 @@ h2 {
 }
 
 /* Responsive adjustments */
-@media (max-width: 1200px) {
-    .gallery-row {
-        grid-template-columns: repeat(4, 1fr);
-    }
-}
-
 @media (max-width: 768px) {
     .gallery-row {
-        grid-template-columns: repeat(2, 1fr);
+        grid-template-columns: repeat(4, 1fr); /* 4 columns on screens <= 768px */
+    }
+
+    .grid-item {
+        padding: 10px;
+        font-size: 16px; /* Reduce font size for mobile view */
     }
 }
 
+/* Media Query for very small screens */
 @media (max-width: 480px) {
     .gallery-row {
-        grid-template-columns: 1fr;
+        grid-template-columns: repeat(4, 1fr); /* Keep 4 columns on screens <= 480px */
+        gap: 8px; /* Reduce gap for smaller screens */
+        padding: 0 8px; /* Adjust padding */
+    }
+
+    .grid-item {
+        padding: 10px;
+        font-size: 14px; /* Further reduce font size for very small screens */
+    }
+}
+
+/* Media Query for extremely small screens like 320px */
+@media (max-width: 320px) {
+    .gallery-row {
+        grid-template-columns: repeat(2, 1fr); /* 2 columns on screens <= 320px */
+    }
+
+    .grid-item {
+        padding: 10px;
+        font-size: 12px; /* Smallest font size for extremely small screens */
     }
 }
 
@@ -762,26 +793,33 @@ button:hover {
     max-width: 200px; /* Set a maximum width for smaller images */
     margin: 0 auto;
     border: none;
-    border-radius:20px ;
+   
    
 }
 
-@media (max-width: 600px) {
-    .image-box a {
-        flex: 1 1 calc(50% - 10px); /* Two images per row on smaller screens */
+
+
+@media (max-width: 768px) {
+    .image-box {
+        grid-template-columns: repeat(3, 1fr); /* 2 columns on screens <= 768px */
     }
 }
 
-@media (max-width: 400px) {
-    .image-box a {
-        flex: 1 1 calc(100% - 10px); /* One image per row on very small screens */
-    }
-    .image-box{
-        margin-left: 50px;
+/* Media Query for very small screens */
+@media (max-width: 480px) {
+    .image-box {
+        grid-template-columns: repeat(3, 1fr); /* Keep 2 columns on screens <= 480px */
+        gap: 8px; /* Reduce gap for smaller screens */
+        padding: 0 8px; /* Adjust padding */
     }
 }
 
-
+/* Media Query for extremely small screens like 320px */
+@media (max-width: 320px) {
+    .image-box {
+        grid-template-columns: repeat(3, 1fr); /* 1 column on screens <= 320px */
+    }
+}
 
 /* footer  */
 
