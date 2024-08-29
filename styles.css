@@ -477,6 +477,8 @@ h2 {
 
 #shopwhy{
     background-image: url("https://img.freepik.com/premium-photo/supermarket-store-aisle-interior-abstract-blurred-background_293060-10503.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 .gallery-row {
@@ -526,8 +528,9 @@ h2 {
 /* Media Query for very small screens */
 @media (max-width: 480px) {
     .gallery-row {
-        grid-template-columns: repeat(4, 1fr); /* Keep 4 columns on screens <= 480px */
-        gap: 8px; /* Reduce gap for smaller screens */
+        margin-left: -20px;
+        grid-template-columns: repeat(3, 1fr); /* Keep 4 columns on screens <= 480px */
+        gap: 2px; /* Reduce gap for smaller screens */
         padding: 0 8px; /* Adjust padding */
     }
 
@@ -535,11 +538,13 @@ h2 {
         padding: 10px;
         font-size: 14px; /* Further reduce font size for very small screens */
     }
+   
 }
 
 /* Media Query for extremely small screens like 320px */
 @media (max-width: 320px) {
     .gallery-row {
+      margin-left: -6px;
         grid-template-columns: repeat(2, 1fr); /* 2 columns on screens <= 320px */
     }
 
@@ -808,18 +813,35 @@ button:hover {
 /* Media Query for very small screens */
 @media (max-width: 480px) {
     .image-box {
+    
         grid-template-columns: repeat(3, 1fr); /* Keep 2 columns on screens <= 480px */
         gap: 8px; /* Reduce gap for smaller screens */
         padding: 0 8px; /* Adjust padding */
+    }
+    .image-box img{
+        height: 90px;
+        width: 55px;
+        gap: 3px;
     }
 }
 
 /* Media Query for extremely small screens like 320px */
 @media (max-width: 320px) {
     .image-box {
+       
+
         grid-template-columns: repeat(3, 1fr); /* 1 column on screens <= 320px */
     }
+    .image-box img{
+        height: 70px;
+        width: 41px;
+        gap: 3px;
+    }
 }
+
+
+
+
 
 /* footer  */
 
