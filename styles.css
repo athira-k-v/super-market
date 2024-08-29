@@ -99,7 +99,7 @@ h2 {
 @media (max-width: 480px) {
     .category-container {
    
-        margin-left:-41px;
+        margin-left:-33px;
         grid-template-columns: repeat(3, 1fr); /* 3 columns on screens <= 480px */
     }
 }
@@ -485,6 +485,7 @@ h2 {
     display: grid;
     grid-template-columns: repeat(8, 1fr);
     gap: 10px;
+
    
 }
 
@@ -496,6 +497,7 @@ h2 {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     background-color: rgb(250, 246, 246); 
     border-radius: 15px;
+    padding: 8px;
    
 }
 
