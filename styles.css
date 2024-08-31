@@ -411,108 +411,125 @@ h2 {
 
 #specials {
     padding: 20px;
-  
     text-align: center;
 }
 
 #specials h2 {
-    text-align: center;
     margin-bottom: 20px;
 }
 
+/* Specials Grid */
 .specials-grid {
-    display: flex;
-    justify-content: center;
-    gap: 10px;
-    flex-wrap: wrap;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); /* Responsive columns */
+    gap: 20px; /* Space between grid items */
+    margin: 0 auto; /* Center the grid */
+    max-width: 1500px; /* Control max width for better alignment on large screens */
 }
 
 .special {
-   
-    
-    border-radius: 20px;
-    padding: 10px;
     text-align: center;
-
-    width: 200px;
-
-    border: none;
+    transition: box-shadow 0.3s ease, transform 0.3s ease;
+    border: 1px solid #ddd; /* Border around each item */
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column; /* Stack contents vertically */
+    justify-content: space-between; /* Distribute space */
+    background: #fff; /* Background color for better contrast */
+    padding: 10px; /* Added padding for better spacing */
+    border-radius: 10px; /* Rounded corners for better aesthetics */
 }
 
 .special img {
     width: 100%;
-    height: 120px; /* Fixed height for uniformity */
-    object-fit: cover; /* Ensures images cover the area without distortion */
- 
-    border-radius: 20px 20px 0 0;
-    border: none;
+    height: 150px; /* Adjust height to fit the square-like box */
+    object-fit: cover;
+    border-bottom: 1px solid #ddd;
+    border-radius: 10px 10px 0 0;
 }
 
 .special h3 {
     margin: 10px 0;
-    font-size: 1.2em;
+    font-size: 1em;
 }
 
 .special button {
     padding: 8px 12px;
     font-size: 1em;
     color: #fff;
-    background-color: #2ea30d;
+    background-color: #3ac844;
     border: none;
-    border-radius: 10px;
+    border-radius: 5px;
     cursor: pointer;
     transition: background-color 0.3s ease;
 }
 
 .special button:hover {
-    background-color: #4d82ff;
+    background-color: #4d53ff;
 }
 
 .special:hover {
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    transform: translateY(-5px); /* Adds a subtle lift on hover */
-
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+    transform: translateY(-5px);
 }
 
+/* Responsive adjustments */
 
-@media (max-width: 568px) {
-    .special{
-        width: calc(100% / 4 - 50px); /* Adjusting for smaller screens */
+@media (max-width: 980px) {
+    .specials-grid {
+        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); /* Responsive columns */
+        gap: 15px; /* Reduced gap for tablets */
     }
-  
+}
+
+@media (max-width: 768px) {
+    .specials-grid {
+        grid-template-columns: repeat(auto-fit, minmax(111px, 1fr)); /* Responsive columns */
+        gap: 10px; /* Reduced gap for tablets */
+    }
 }
 
 @media (max-width: 480px) {
-    .special {
-        
-        width: 100%; /* Stack items on very small screens */
-        border-radius: 1px;
-        padding: 1px;
+    .specials-grid {
+        grid-template-columns: repeat(auto-fit, minmax(86px, 1fr)); /* Responsive columns */
+        gap: 11px; /* Further reduced gap for small mobile devices */
     }
-    .special {
-        width: calc(100% / 3 - 20px); /* Adjusting for smaller screens */
-    }
+
     .special img {
-        width: 50px;
-        height: 50px;
-        object-fit: cover;
-        border-bottom: 1px solid #ddd;
-        border-radius: 20px 20px 0 0;
+        height: 80px; /* Reduced image height for mobile */
     }
-    .special button{
-       height: 20px;
-       border-radius: 1px;
-       font-size: 6px;
+
+    .special h3 {
+        font-size: 0.9em; /* Reduced font size for mobile */
     }
-    
-    #specials h2 {
-        font-size: 20px;
-    }
-    #specials h3 {
-        font-size: 12px;
+
+    .special button {
+        font-size: 0.7em; /* Slightly reduced button font size */
     }
 }
 
+@media (max-width: 320px) {
+    .specials-grid {
+        grid-template-columns: repeat(auto-fit, minmax(68px, 1fr)); /* Responsive columns */
+        gap: 8px; /* Reduced gap for very small screens */
+    }
+
+    .special {
+        padding: 5px; /* Reduced padding for very small screens */
+    }
+
+    .special img {
+        height: 100px; /* Further reduced image height */
+    }
+
+    .special h3 {
+        font-size: 0.8em; /* Further reduced font size */
+    }
+
+    .special button {
+        font-size: 0.8em; /* Further reduced button font size */
+    }
+}
 
 
 
@@ -931,7 +948,6 @@ button:hover {
 /* shopby-catagory-img */
 
 
-
 .image-box {
     display: flex;
     flex-wrap: wrap; /* Allows the boxes to wrap on smaller screens */
@@ -956,17 +972,17 @@ button:hover {
 /* Media Query for Tablet View (<= 768px) */
 @media (max-width: 768px) {
     .image-box a {
-        flex: 1 1 calc(33.33% - 10px); /* Three images per row on tablets */
+        flex: 1 1 calc(25% - 10px); /* Three images per row on tablets */
     }
 }
 
 /* Media Query for Mobile View (<= 480px) */
 @media (max-width: 480px) {
     .image-box {
-        gap: 1px; /* Reduce the gap for smaller screens */
+        gap: 8px; /* Reduce the gap for smaller screens */
     }
     .image-box a {
-        flex: 1 1 calc(25% - 5px); /* Maintain four images per row on mobile */
+        flex: 1 1 calc(50% - 8px); /* Two images per row on mobile */
     }
     .image-box img {
         max-width: 100%; /* Allow images to take up more space */
@@ -976,16 +992,17 @@ button:hover {
 /* Media Query for Very Small Screens (<= 320px) */
 @media (max-width: 320px) {
     .image-box {
-        gap: 1px; /* Further reduce the gap for very small screens */
+        gap: 5px; /* Further reduce the gap for very small screens */
     }
     .image-box a {
-        flex: 1 1 calc(25% - 3px); /* Maintain four images per row on very small screens */
+        flex: 1 1 calc(50% - 5px); /* Maintain two images per row on very small screens */
     }
     .image-box img {
         height: 70px;
         width: 100%; /* Allow images to take up more space */
     }
 }
+
 
 
 /* footer  */
