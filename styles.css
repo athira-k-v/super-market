@@ -585,7 +585,12 @@ h2 {
 
 @media (max-width: 768px) {
     .image-grid {
-        grid-template-columns: 1fr; /* 1 column on small screens */
+        grid-template-columns: repeat(2, 1fr); /* 1 column on small screens */
+    }
+}
+@media (max-width: 320px) {
+    .image-grid {
+        grid-template-columns: repeat(2, 1fr); /* 1 column on small screens */
     }
 }
 
