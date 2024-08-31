@@ -138,9 +138,7 @@ h2 {
 /* deals section  */
 
 
-
-
-
+/* Deals Section */
 #deals {
     padding: 20px;
     text-align: center;
@@ -150,25 +148,26 @@ h2 {
     margin-bottom: 20px;
 }
 
+/* Deals Grid */
 .deals-grid {
     display: grid;
-    grid-template-columns: repeat(4, 1fr); /* Four equal columns */
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); /* Responsive columns */
     gap: 20px; /* Space between grid items */
     margin: 0 auto; /* Center the grid */
-    max-width: 1200px; /* Optional: Control max width for better alignment on large screens */
+    max-width: 1200px; /* Control max width for better alignment on large screens */
 }
 
 .deal {
-   
     text-align: center;
-    transition: box-shadow 0.3s ease;
+    transition: box-shadow 0.3s ease, transform 0.3s ease;
     border: 1px solid #ddd; /* Border around each item */
     box-sizing: border-box;
     display: flex;
     flex-direction: column; /* Stack contents vertically */
     justify-content: space-between; /* Distribute space */
     background: #fff; /* Background color for better contrast */
-    padding: 1px; /* Padding inside each deal item */
+    padding: 10px; /* Added padding for better spacing */
+    border-radius: 10px; /* Rounded corners for better aesthetics */
 }
 
 .deal img {
@@ -209,21 +208,21 @@ h2 {
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 10px; /* Space between buttons and input */
+    gap: 8px; /* Space between buttons and input */
     margin: 10px 0; /* Space above and below the quantity controls */
 }
 
 .qty-controls button {
- 
+    background-color: #ccc;
     border: none;
-    width: 40px; /* Increased button width for better touch targets */
-    height: 40px; /* Increased button height for consistency */
+    width: 35px; /* Adjusted width for smaller buttons */
+    height: 35px; /* Adjusted height for smaller buttons */
     display: flex;
     align-items: center;
     justify-content: center;
     cursor: pointer;
-    font-size: 20px; /* Larger font size for readability */
-    
+    font-size: 18px; /* Adjusted font size for readability */
+    border-radius: 5px; /* Rounded corners */
     transition: background-color 0.3s ease;
 }
 
@@ -232,59 +231,72 @@ h2 {
 }
 
 .qty-controls .qty-input {
-    width: 60px; /* Adjusted width for better alignment */
+    width: 45px; /* Adjusted width for smaller input field */
     text-align: center;
     margin: 0;
     border: 1px solid #ccc;
     border-radius: 4px;
-    height: 40px; /* Matching height with buttons */
-    font-size: 16px; /* Adjusted font size for readability */
+    height: 35px; /* Adjusted height for consistency with buttons */
+    font-size: 14px; /* Adjusted font size for readability */
     box-sizing: border-box; /* Ensures padding and border are included in the width */
 }
 
 /* Responsive adjustments */
 
-
 @media (max-width: 980px) {
     .deals-grid {
-        grid-template-columns: repeat(4, 1fr); /* Two items per row on tablets */
-        gap: 10px; /* Reduced gap for tablets */
-        margin-left: -30px;
+        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); /* Responsive columns */
+        gap: 15px; /* Reduced gap for tablets */
     }
 
-}
-
-
-@media (max-width: 768px) {
-    .deals-grid {
-        grid-template-columns: repeat(4, 1fr); /* Two items per row on tablets */
-        gap: 2px; /* Reduced gap for tablets */
-        margin-left: -101px;
+    .qty-controls {
+        gap: 6px; /* Reduced gap for tablets */
     }
 
     .qty-controls button {
-        width: 35px; /* Slightly smaller buttons for tablets */
-        height: 35px;
-        font-size: 18px; /* Slightly smaller font size */
+        width: 30px; /* Smaller buttons for tablets */
+        height: 30px;
+        font-size: 16px; /* Smaller font size for tablets */
     }
 
     .qty-controls .qty-input {
-        width: 50px; /* Slightly smaller input field for tablets */
-        height: 35px;
-        font-size: 14px; /* Slightly smaller font size */
+        width: 40px; /* Smaller input field for tablets */
+        height: 30px;
+        font-size: 12px; /* Smaller font size for tablets */
+    }
+}
+
+@media (max-width: 768px) {
+    .deals-grid {
+        grid-template-columns: repeat(auto-fit, minmax(111px, 1fr)); /* Responsive columns */
+        gap: 10px; /* Reduced gap for tablets */
+    }
+
+    .qty-controls {
+        gap: 5px; /* Further reduced gap for tablets */
+    }
+
+    .qty-controls button {
+        width: 28px; /* Even smaller buttons for tablets */
+        height: 28px;
+        font-size: 14px; /* Further reduced font size for tablets */
+    }
+
+    .qty-controls .qty-input {
+        width: 35px; /* Further reduced input field size for tablets */
+        height: 28px;
+        font-size: 11px; /* Further reduced font size for tablets */
     }
 }
 
 @media (max-width: 480px) {
     .deals-grid {
-        grid-template-columns: repeat(4fr); /* Two items per row on small mobile devices */
-        gap: 2px; /* Further reduced gap for small mobile devices */
-        margin-left: -54px;
+        grid-template-columns: repeat(auto-fit, minmax(80px, 1fr)); /* Responsive columns */
+        gap: 5px; /* Further reduced gap for small mobile devices */
     }
 
     .deal img {
-        height: 50px; /* Reduced image height for mobile */
-     
+        height: 80px; /* Reduced image height for mobile */
     }
 
     .deal h3, .deal h4 {
@@ -295,23 +307,27 @@ h2 {
         font-size: 0.7em; /* Slightly reduced button font size */
     }
 
+    .qty-controls {
+        gap: 4px; /* Further reduced gap for small mobile devices */
+    }
+
     .qty-controls button {
-        width: 20px; /* Smaller buttons for mobile */
-        height: 30px;
-        font-size: 16px; /* Smaller font size */
+        width: 25px; /* Smaller buttons for mobile */
+        height: 25px;
+        font-size: 12px; /* Smaller font size for mobile */
     }
 
     .qty-controls .qty-input {
         width: 30px; /* Smaller input field for mobile */
-        height: 30px;
-        font-size: 9px; /* Smaller font size */
+        height: 25px;
+        font-size: 10px; /* Smaller font size for mobile */
     }
 }
 
 @media (max-width: 320px) {
     .deals-grid {
-        grid-template-columns: 3fr; /* One item per row on very small screens */
-        gap: 5px; /* Reduced gap for very small screens */
+        grid-template-columns: repeat(auto-fit, minmax(57px, 1fr)); /* Responsive columns */
+        gap: 8px; /* Reduced gap for very small screens */
     }
 
     .deal {
@@ -330,18 +346,23 @@ h2 {
         font-size: 0.8em; /* Further reduced button font size */
     }
 
+    .qty-controls {
+        gap: 3px; /* Minimal gap for very small screens */
+    }
+
     .qty-controls button {
-        width: 25px; /* Further reduced button size for very small screens */
-        height: 25px;
-        font-size: 14px; /* Further reduced font size */
+        width: 20px; /* Further reduced button size for very small screens */
+        height: 20px;
+        font-size: 10px; /* Further reduced font size */
     }
 
     .qty-controls .qty-input {
-        width: 30px; /* Further reduced input field size */
-        height: 25px;
-        font-size: 10px; /* Further reduced font size */
+        width: 25px; /* Further reduced input field size */
+        height: 20px;
+        font-size: 8px; /* Further reduced font size */
     }
 }
+
 
 
 
