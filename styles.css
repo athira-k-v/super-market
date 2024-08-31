@@ -292,7 +292,7 @@ h2 {
 @media (max-width: 480px) {
     .deals-grid {
         grid-template-columns: repeat(auto-fit, minmax(80px, 1fr)); /* Responsive columns */
-        gap: 5px; /* Further reduced gap for small mobile devices */
+        gap: 7px; /* Further reduced gap for small mobile devices */
     }
 
     .deal img {
