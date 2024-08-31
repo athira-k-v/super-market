@@ -137,7 +137,6 @@ h2 {
 
 /* deals section  */
 
-
 /* Deals Section */
 #deals {
     padding: 20px;
@@ -151,7 +150,7 @@ h2 {
 /* Deals Grid */
 .deals-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); /* Responsive columns */
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); /* Default: 4 columns in a row */
     gap: 20px; /* Space between grid items */
     margin: 0 auto; /* Center the grid */
     max-width: 1500px; /* Control max width for better alignment on large screens */
@@ -243,64 +242,27 @@ h2 {
 
 /* Responsive adjustments */
 
-@media (max-width: 980px) {
-    .deals-grid {
-        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); /* Responsive columns */
-        gap: 15px; /* Reduced gap for tablets */
-    }
-
-    .qty-controls {
-        gap: 6px; /* Reduced gap for tablets */
-    }
-
-    .qty-controls button {
-        width: 30px; /* Smaller buttons for tablets */
-        height: 30px;
-        font-size: 16px; /* Smaller font size for tablets */
-    }
-
-    .qty-controls .qty-input {
-        width: 40px; /* Smaller input field for tablets */
-        height: 30px;
-        font-size: 12px; /* Smaller font size for tablets */
-    }
-}
-
+/* For tablet and small desktop view */
 @media (max-width: 768px) {
     .deals-grid {
-        grid-template-columns: repeat(auto-fit, minmax(111px, 1fr)); /* Responsive columns */
-        gap: 10px; /* Reduced gap for tablets */
-    }
-
-    .qty-controls {
-        gap: 5px; /* Further reduced gap for tablets */
-    }
-
-    .qty-controls button {
-        width: 28px; /* Even smaller buttons for tablets */
-        height: 28px;
-        font-size: 14px; /* Further reduced font size for tablets */
-    }
-
-    .qty-controls .qty-input {
-        width: 35px; /* Further reduced input field size for tablets */
-        height: 28px;
-        font-size: 11px; /* Further reduced font size for tablets */
+        grid-template-columns: repeat(auto-fit, minmax(108px, 1fr)); /* Still 4 columns in a row */
+        gap: 15px; /* Reduced gap for tablets */
     }
 }
 
+/* For mobile view (480px and below) */
 @media (max-width: 480px) {
     .deals-grid {
-        grid-template-columns: repeat(auto-fit, minmax(86px, 1fr)); /* Responsive columns */
-        gap: 11px; /* Further reduced gap for small mobile devices */
+        grid-template-columns: repeat(auto-fit, minmax(90px, 2fr)); /* Adjust to 3 columns in a row */
+        gap: 11px; /* Reduced gap for small mobile devices */
     }
 
     .deal img {
-        height: 80px; /* Reduced image height for mobile */
+        height: 90px; /* Reduced image height for mobile */
     }
 
     .deal h3, .deal h4 {
-        font-size: 0.9em; /* Reduced font size for mobile */
+        font-size: .9em; /* Reduced font size for mobile */
     }
 
     .deal button {
@@ -324,22 +286,10 @@ h2 {
     }
 }
 
-@media (max-width: 381px) {
+/* For very small mobile view (320px and below) */
+@media (max-width: 320px) {
     .deals-grid {
-        grid-template-columns: repeat(auto-fit, minmax(84px, 1fr)); /* Responsive columns */
-        gap: 11px; /* Further reduced gap for small mobile devices */
-    }
-}
-
-@media (max-width: 378px) {
-    .deals-grid {
-        grid-template-columns: repeat(auto-fit, minmax(84px, 1fr)); /* Responsive columns */
-        gap: 11px; /* Further reduced gap for small mobile devices */
-    }
-}
-    @media (max-width: 320px) {
-    .deals-grid {
-        grid-template-columns: repeat(auto-fit, minmax(68px, 1fr)); /* Responsive columns */
+        grid-template-columns: repeat(auto-fit, minmax(65px, 1fr)); /* 3 columns in a row */
         gap: 8px; /* Reduced gap for very small screens */
     }
 
@@ -348,7 +298,7 @@ h2 {
     }
 
     .deal img {
-        height: 100px; /* Further reduced image height */
+        height: 80px; /* Further reduced image height */
     }
 
     .deal h3, .deal h4 {
@@ -375,6 +325,7 @@ h2 {
         font-size: 8px; /* Further reduced font size */
     }
 }
+
 
 
 
@@ -1625,7 +1576,7 @@ body {
         align-items: center;
         justify-content: flex-start;
         margin: 10px 0;
-        margin-left:12px ;
+        margin-left:15px ;
        
     }
 
@@ -1701,6 +1652,37 @@ body {
     }
 }
 
+
+@media (max-width: 740px) {
+    .quantity-controls {
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        margin: 10px 0;
+        margin-left:-8px ;
+       
+    }
+}
+@media (max-width: 575px) {
+    .quantity-controls {
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        margin: 10px 0;
+        margin-left:12px ;
+       
+    }
+}
+@media (max-width: 370px) {
+    .quantity-controls {
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        margin: 10px 0;
+        margin-left:15px ;
+       
+    }
+}
 
 
 
