@@ -42,7 +42,6 @@ section {
 
 .categories {
     padding: 20px;
-  
 }
 
 .container {
@@ -65,24 +64,26 @@ h2 {
 /* Category box styles */
 .category {
     text-align: center;
-    padding: 10px;
-  
-    transition: transform 0.2s;
-    
+    overflow: hidden;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    transition: transform 0.2s;
 }
 
 .category img {
-    max-width: 100%;
+    width: 100%;
     height: auto;
-  
+    aspect-ratio: 1 / 1; /* Maintain square aspect ratio */
     object-fit: cover; /* Ensures images maintain aspect ratio within their containers */
-    width: 100%; /* Ensures images take full width of the container */
-    height: 150px; /* Set a consistent height for all images */
+}
+
+.category-info {
+    padding: 10px;
+    background-color: #fff; /* White background to separate it from the image */
+    box-sizing: border-box;
 }
 
 .category-info h3 {
-    margin: 10px 0 0;
+    margin: 0;
     font-size: 18px;
     color: #333; /* Darker text for readability */
 }
@@ -96,21 +97,15 @@ h2 {
 /* Media Query for Tablet View */
 @media (max-width: 767px) {
     .category-container {
-        grid-template-columns: repeat(4, 1fr); /* 2 columns on screens <= 767px */
+        grid-template-columns: repeat(4, 1fr); /* 4 columns on screens <= 767px */
     }
 }
 
 /* Media Query for Mobile View */
 @media (max-width: 480px) {
     .category-container {
-        grid-template-columns: repeat(3, 1fr); /* 2 columns on screens <= 480px */
+        grid-template-columns: repeat(3, 1fr); /* 3 columns on screens <= 480px */
         gap: 8px; /* Reduce gap for smaller screens */
-    }
-    .category {
-        padding: 8px;
-    }
-    .category img {
-        height: 120px; /* Adjust image height for smaller screens */
     }
     .category-info h3 {
         font-size: 16px;
@@ -120,14 +115,8 @@ h2 {
 /* Media Query for Very Small Screens */
 @media (max-width: 320px) {
     .category-container {
-        grid-template-columns: repeat(2, 1fr); /* 1 column on screens <= 320px */
+        grid-template-columns: repeat(2, 1fr); /* 2 columns on screens <= 320px */
         gap: 4px;
-    }
-    .category {
-        padding: 6px;
-    }
-    .category img {
-        height: 100px; /* Further adjust image height for very small screens */
     }
     .category-info h3 {
         font-size: 14px;
@@ -135,7 +124,8 @@ h2 {
 }
 
 
-/* deals section  */
+
+
 
 /* Deals Section */
 #deals {
