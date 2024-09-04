@@ -41,57 +41,57 @@ section {
 /* catagories  */
 
 .categories {
-    padding: 20px;
+    padding: 10px; /* Reduced padding */
 }
 
 .container {
     margin: 0 auto;
-    /* padding: 0 15px; */
+    padding: 0 10px; /* Reduced padding */
 }
 
 h2 {
     text-align: center;
-    margin-bottom: 20px;
+    margin-bottom: 15px; /* Reduced bottom margin */
 }
 
 /* General styles for the category container */
 .category-container {
     display: grid;
-    grid-template-columns: repeat(4, 1fr); /* 4 columns by default */
-    gap: 16px; /* Space between categories */
+    grid-template-columns: repeat(6, 1fr); /* 5 columns by default for smaller sizes */
+    gap: 15px; /* Reduced space between categories */
 }
 
 /* Category box styles */
 .category {
     text-align: center;
     overflow: hidden;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1); /* Slightly smaller shadow */
     transition: transform 0.2s;
 }
 
 .category img {
     width: 100%;
     height: auto;
-    aspect-ratio: 1 / 1; /* Maintain square aspect ratio */
+    aspect-ratio: 1; /* Maintain square aspect ratio */
     object-fit: cover; /* Ensures images maintain aspect ratio within their containers */
 }
 
 .category-info {
-    /* padding: 10px; */
+    padding: 8px; /* Reduced padding */
     background-color: #fff; /* White background to separate it from the image */
     box-sizing: border-box;
 }
 
 .category-info h3 {
     margin: 0;
-    font-size: 18px;
+    font-size: 16px; /* Reduced font size */
     color: #333; /* Darker text for readability */
 }
 
 /* Hover effect for categories */
 .category:hover {
     transform: scale(1.05);
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2); /* Enhance shadow on hover */
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2); /* Slightly smaller shadow on hover */
 }
 
 /* Media Query for Tablet View */
@@ -105,10 +105,10 @@ h2 {
 @media (max-width: 480px) {
     .category-container {
         grid-template-columns: repeat(3, 1fr); /* 3 columns on screens <= 480px */
-        gap: 8px; /* Reduce gap for smaller screens */
+        gap: 8px; /* Reduced gap for smaller screens */
     }
     .category-info h3 {
-        font-size: 16px;
+        font-size: 14px; /* Further reduced font size */
     }
 }
 
@@ -119,9 +119,10 @@ h2 {
         gap: 4px;
     }
     .category-info h3 {
-        font-size: 14px;
+        font-size: 12px; /* Smallest font size */
     }
 }
+
 
 
 
@@ -250,7 +251,9 @@ h2 {
 @media (min-width: 768px) {
     .deal-list {
         grid-template-columns: repeat(4, 1fr);
+       
     }
+    
 }
 
 
@@ -751,7 +754,7 @@ h2 {
     border: 5px soild black;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     background-color: rgb(250, 246, 246); 
-    border-radius: 15px;
+   
     padding: 8px;
    
 }
@@ -786,7 +789,7 @@ h2 {
 @media (max-width: 480px) {
     .gallery-row {
         margin-left: -20px;
-        grid-template-columns: repeat(3, 1fr); /* Keep 4 columns on screens <= 480px */
+        grid-template-columns: repeat(4, 1fr); /* Keep 4 columns on screens <= 480px */
         gap: 2px; /* Reduce gap for smaller screens */
         padding: 0 8px; /* Adjust padding */
     }
