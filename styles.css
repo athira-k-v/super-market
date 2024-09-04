@@ -2144,26 +2144,7 @@ body {
 
 
 
-/* carousal section */
 
-/* General carousel styles */
-.carousel-inner img {
-    width: 100%;
-    height: auto; /* Maintain aspect ratio */
-}
-
-/* Responsive styles */
-@media (max-width: 768px) {
-    .carousel-inner img {
-        height: 40vh; /* Set height to a percentage of the viewport height for better scaling */
-    }
-}
-
-@media (max-width: 480px) {
-    .carousel-inner img {
-        height: 30vh; /* Increase height for very small screens */
-    }
-}
 
 
 
@@ -2176,33 +2157,36 @@ body {
     width: 100%;
     max-width: 1200px;
     margin: 0 auto;
-    padding: 50px;
+    padding: 50px 20px; /* Reduced padding for better mobile fit */
+    box-sizing: border-box;
+
 }
 
 .testimonial-wrapper {
     display: flex;
     transition: transform 0.5s ease;
     
+
 }
 
 .testimonial-slide {
     display: flex;
     min-width: 100%;
-    
+    box-sizing: border-box;
+
 }
 
 .testimonial-item {
     flex: 1;
     margin: 0 10px;
-    background-color: #5b6a5b;
+   
     padding: 20px;
     border-radius: 10px;
-    color: rgb(16, 13, 13);
+   color: black;
     text-align: center;
-
-        background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSBoy6U_pucjRO9iiqhQINANwQbwZvA9LcDG64VRwUBZdV2qjQqkg07Sh4Lm91SYqTxI-4&usqp=CAU");
-background-size: cover;
-background-repeat: no-repeat;
+    background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSBoy6U_pucjRO9iiqhQINANwQbwZvA9LcDG64VRwUBZdV2qjQqkg07Sh4Lm91SYqTxI-4&usqp=CAU");
+    background-size: cover;
+    background-repeat: no-repeat;
 }
 
 .testimonial-item img {
@@ -2210,21 +2194,25 @@ background-repeat: no-repeat;
     height: 80px;
     border-radius: 50%;
     margin-bottom: 15px;
+    border: 3px solid white; /* Added border to improve visibility */
 }
 
 .testimonial-item h3 {
     font-size: 1.2em;
     margin-bottom: 5px;
+    color: rgb(27, 25, 25); /* Improved readability against the background */
 }
 
 .testimonial-item p {
     font-size: 0.9em;
     margin-bottom: 10px;
+    color: rgb(4, 4, 4); /* Improved readability against the background */
 }
 
 .testimonial-item blockquote {
     font-style: italic;
     margin-bottom: 15px;
+    color: rgb(14, 13, 13); /* Improved readability against the background */
 }
 
 .rating {
@@ -2239,10 +2227,11 @@ background-repeat: no-repeat;
     background-color: rgba(0, 0, 0, 0.5);
     border: none;
     padding: 10px;
-    color: white;
+    color: rgb(30, 28, 28);
     font-size: 1.5em;
     cursor: pointer;
     border-radius: 50%;
+    z-index: 10;
 }
 
 .prev {
@@ -2253,5 +2242,45 @@ background-repeat: no-repeat;
     right: 10px;
 }
 
-  
-  
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .testimonial-slide {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .testimonial-item {
+        flex-basis: 80%;
+        margin: 15px 0; /* Spacing between stacked items */
+    }
+
+    .prev, .next {
+        top: 90%; /* Adjust button position for mobile */
+    }
+}
+
+@media (max-width: 480px) {
+    .testimonial-item {
+        flex-basis: 100%;
+        padding: 15px;
+        margin: 10px 0;
+    }
+
+    .testimonial-item img {
+        width: 60px;
+        height: 60px;
+    }
+
+    .testimonial-item h3 {
+        font-size: 1em;
+    }
+
+    .testimonial-item p, .testimonial-item blockquote {
+        font-size: 0.8em;
+    }
+
+    .prev, .next {
+        top: 95%; /* Adjust button position for smaller mobile screens */
+        font-size: 1.2em;
+    }
+}
