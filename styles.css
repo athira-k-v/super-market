@@ -128,197 +128,130 @@ h2 {
 
 
 /* Deals Section */
-#deals {
-    padding: 20px;
-    text-align: center;
-}
 
-#deals h2 {
-    margin-bottom: 20px;
-}
 
-/* Deals Grid */
-.deals-grid {
+.deal-list {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); /* Default: 4 columns in a row */
-    gap: 20px; /* Space between grid items */
-    margin: 0 auto; /* Center the grid */
-    max-width: 1500px; /* Control max width for better alignment on large screens */
+    gap: 20px;
+    padding: 10px; /* Added padding for better spacing within the container */
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Responsive grid columns */
 }
 
-.deal {
+.deal-item {
+    background-color: #fff;
+    border-radius: 8px;
+    overflow: hidden;
     text-align: center;
-    transition: box-shadow 0.3s ease, transform 0.3s ease;
-    border: 1px solid #ddd; /* Border around each item */
-    box-sizing: border-box;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 15px;
     display: flex;
-    flex-direction: column; /* Stack contents vertically */
-    justify-content: space-between; /* Distribute space */
-    background: #fff; /* Background color for better contrast */
-    padding: 10px; /* Added padding for better spacing */
-   
+    flex-direction: column;
+    justify-content: space-between; /* Ensures content is evenly distributed */
+    height: 100%; /* Ensure all items have the same height */
 }
 
-.deal img {
-    width: 100%;
-    height: 150px; /* Adjust height to fit the square-like box */
-    object-fit: cover;
-    border-bottom: 1px solid #ddd;
-    border-radius: 10px 10px 0 0;
+.deal-item img {
+    max-width: 100%;
+    height: 120px;
+    border-bottom: 1px solid #e0e0e0;
+    margin-bottom: 15px;
 }
 
-.deal h3, .deal h4 {
-    margin: 10px 0;
+.deal-item h3 {
+    font-size: 1.2em;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.deal-item p {
     font-size: 1em;
+    color: #666;
+    margin-bottom: 15px;
 }
 
-.deal button {
-    padding: 8px 12px;
-    font-size: 1em;
-    color: #fff;
-    background-color: #3ac844;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-}
-
-.deal button:hover {
-    background-color: #4d53ff;
-}
-
-.deal:hover {
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
-    transform: translateY(-5px);
-}
-
-/* Quantity Controls */
 .qty-controls {
     display: flex;
-    align-items: center;
     justify-content: center;
-    gap: 8px; /* Space between buttons and input */
-    margin: 10px 0; /* Space above and below the quantity controls */
+    align-items: center;
+    margin-top: 10px;
 }
 
 .qty-controls button {
-    background-color: #ccc;
+    width: 30px;
+    height: 30px;
+    background-color: #ddd;
     border: none;
-    width: 35px; /* Adjusted width for smaller buttons */
-    height: 35px; /* Adjusted height for smaller buttons */
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    font-size: 18px;
     cursor: pointer;
-    font-size: 18px; /* Adjusted font size for readability */
-    border-radius: 5px; /* Rounded corners */
-    transition: background-color 0.3s ease;
+    transition: background-color 0.3s;
 }
 
 .qty-controls button:hover {
-    background-color: #aaa;
+    background-color: #ccc;
 }
 
-.qty-controls .qty-input {
-    width: 45px; /* Adjusted width for smaller input field */
+.qty-controls input {
+    width: 30px; /* Adjusted width for better visibility */
+    height: 30px;
     text-align: center;
-    margin: 0;
-    border: 1px solid #ccc;
+    border: 1px solid #ddd;
+    margin: 0 5px;
+    font-size: 16px;
     border-radius: 4px;
-    height: 35px; /* Adjusted height for consistency with buttons */
-    font-size: 14px; /* Adjusted font size for readability */
-    box-sizing: border-box; /* Ensures padding and border are included in the width */
 }
 
-/* Responsive adjustments */
-
-/* For tablet and small desktop view */
-@media (max-width: 768px) {
-    .deals-grid {
-        grid-template-columns: repeat(auto-fit, minmax(108px, 1fr)); /* Still 4 columns in a row */
-        gap: 15px; /* Reduced gap for tablets */
-    }
+.btn-cart {
+    margin-top: 15px;
+    background-color: #28a745;
+    color: #fff;
+    padding: 10px;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: background-color 0.3s;
+    font-size: 16px;
+    width: 40px;
+    height: 40px;
+    align-self: center; /* Center aligns the button */
 }
 
-/* For mobile view (480px and below) */
-@media (max-width: 480px) {
-    .deals-grid {
-        grid-template-columns: repeat(auto-fit, minmax(90px, 2fr)); /* Adjust to 3 columns in a row */
-        gap: 11px; /* Reduced gap for small mobile devices */
+.btn-cart i {
+    font-size: 16px;
+}
+
+.btn-cart:hover {
+    background-color: #218838;
+}
+
+@media (max-width: 767px) {
+    .deal-list {
+        grid-template-columns: repeat(3, 1fr); /* Adjusted to 2 columns for better spacing */
     }
 
-    .deal img {
-        height: 90px; /* Reduced image height for mobile */
+    .btn-cart {
+        width: 35px;
+        height: 35px;
+        font-size: 14px;
     }
 
-    .deal h3, .deal h4 {
-        font-size: .9em; /* Reduced font size for mobile */
+    .qty-con input {
+        width: 30px; /* Reduced width for better fit on smaller screens */
     }
 
-    .deal button {
-        font-size: 0.7em; /* Slightly reduced button font size */
-    }
-
-    .qty-controls {
-        gap: 4px; /* Further reduced gap for small mobile devices */
-    }
-
-    .qty-controls button {
-        width: 25px; /* Smaller buttons for mobile */
+    .qty-con button {
+        width: 25px; /* Reduced button size for better fit on smaller screens */
         height: 25px;
-        font-size: 12px; /* Smaller font size for mobile */
-    }
-
-    .qty-controls .qty-input {
-        width: 30px; /* Smaller input field for mobile */
-        height: 25px;
-        font-size: 10px; /* Smaller font size for mobile */
+        font-size: 16px;
     }
 }
 
-/* For very small mobile view (320px and below) */
-@media (max-width: 320px) {
-    .deals-grid {
-        grid-template-columns: repeat(auto-fit, minmax(65px, 1fr)); /* 3 columns in a row */
-        gap: 8px; /* Reduced gap for very small screens */
-    }
-
-    .deal {
-        padding: 5px; /* Reduced padding for very small screens */
-    }
-
-    .deal img {
-        height: 80px; /* Further reduced image height */
-    }
-
-    .deal h3, .deal h4 {
-        font-size: 0.8em; /* Further reduced font size */
-    }
-
-    .deal button {
-        font-size: 0.8em; /* Further reduced button font size */
-    }
-
-    .qty-controls {
-        gap: 3px; /* Minimal gap for very small screens */
-    }
-
-    .qty-controls button {
-        width: 20px; /* Further reduced button size for very small screens */
-        height: 20px;
-        font-size: 10px; /* Further reduced font size */
-    }
-
-    .qty-controls .qty-input {
-        width: 25px; /* Further reduced input field size */
-        height: 20px;
-        font-size: 8px; /* Further reduced font size */
+@media (min-width: 768px) {
+    .deal-list {
+        grid-template-columns: repeat(4, 1fr);
     }
 }
-
-
-
-
 
 
 
@@ -350,25 +283,169 @@ h2 {
 
 /* special section  */
 
-#specials {
+
+
+
+
+
+
+
+.special-list {
+    display: grid;
+    gap: 20px;
+    padding: 10px; /* Added padding for better spacing within the container */
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Responsive grid columns */
+}
+
+.special-item {
+    background-color: #fff;
+    border-radius: 8px;
+    overflow: hidden;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* Ensures content is evenly distributed */
+    height: 100%; /* Ensure all items have the same height */
+}
+
+.special-item img {
+    max-width: 100%;
+    height: 120px;
+    border-bottom: 1px solid #e0e0e0;
+    margin-bottom: 15px;
+}
+
+.special-item h3 {
+    font-size: 1.2em;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.special-item p {
+    font-size: 1em;
+    color: #666;
+    margin-bottom: 15px;
+}
+
+.qty-con {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10px;
+}
+
+.qty-con button {
+    width: 30px;
+    height: 30px;
+    background-color: #ddd;
+    border: none;
+    font-size: 18px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.qty-con button:hover {
+    background-color: #ccc;
+}
+
+.qty-con input {
+    width: 40px; /* Adjusted width for better visibility */
+    height: 30px;
+    text-align: center;
+    border: 1px solid #ddd;
+    margin: 0 5px;
+    font-size: 16px;
+    border-radius: 4px;
+}
+
+.btn-cart {
+    margin-top: 15px;
+    background-color: #28a745;
+    color: #fff;
+    padding: 10px;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: background-color 0.3s;
+    font-size: 16px;
+    width: 40px;
+    height: 40px;
+    align-self: center; /* Center aligns the button */
+}
+
+.btn-cart i {
+    font-size: 16px;
+}
+
+.btn-cart:hover {
+    background-color: #218838;
+}
+
+@media (max-width: 767px) {
+    .special-list {
+        grid-template-columns: repeat(3, 1fr); /* Adjusted to 2 columns for better spacing */
+    }
+
+    .btn-cart {
+        width: 35px;
+        height: 35px;
+        font-size: 14px;
+    }
+
+    .qty-con input {
+        width: 30px; /* Reduced width for better fit on smaller screens */
+    }
+
+    .qty-con button {
+        width: 25px; /* Reduced button size for better fit on smaller screens */
+        height: 25px;
+        font-size: 16px;
+    }
+}
+
+@media (min-width: 768px) {
+    .special-list {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+
+
+
+
+
+
+
+
+
+
+/* product list  */
+
+
+
+
+#products {
     padding: 20px;
     text-align: center;
 }
 
-#specials h2 {
+#products h2 {
     margin-bottom: 20px;
 }
 
-/* Specials Grid */
-.specials-grid {
+/* Deals Grid */
+.products-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); /* Responsive columns */
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); /* Default: 4 columns in a row */
     gap: 20px; /* Space between grid items */
     margin: 0 auto; /* Center the grid */
     max-width: 1500px; /* Control max width for better alignment on large screens */
 }
 
-.special {
+.product {
     text-align: center;
     transition: box-shadow 0.3s ease, transform 0.3s ease;
     border: 1px solid #ddd; /* Border around each item */
@@ -378,10 +455,9 @@ h2 {
     justify-content: space-between; /* Distribute space */
     background: #fff; /* Background color for better contrast */
     padding: 10px; /* Added padding for better spacing */
-  
 }
 
-.special img {
+.product img {
     width: 100%;
     height: 150px; /* Adjust height to fit the square-like box */
     object-fit: cover;
@@ -389,88 +465,155 @@ h2 {
     border-radius: 10px 10px 0 0;
 }
 
-.special h3 {
+.product h3, .product h4 {
     margin: 10px 0;
     font-size: 1em;
 }
 
-.special button {
+.product button {
     padding: 8px 12px;
     font-size: 1em;
     color: #fff;
     background-color: #3ac844;
     border: none;
-   
+    border-radius: 5px;
     cursor: pointer;
     transition: background-color 0.3s ease;
 }
 
-.special button:hover {
+.product button:hover {
     background-color: #4d53ff;
 }
 
-.special:hover {
+.product:hover {
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
     transform: translateY(-5px);
 }
 
+/* Quantity Controls */
+.qty-control {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px; /* Space between buttons and input */
+    margin: 10px 0; /* Space above and below the quantity controls */
+}
+
+.qty-control button {
+    background-color: #ccc;
+    border: none;
+    width: 35px; /* Adjusted width for smaller buttons */
+    height: 35px; /* Adjusted height for smaller buttons */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    font-size: 18px; /* Adjusted font size for readability */
+    border-radius: 5px; /* Rounded corners */
+    transition: background-color 0.3s ease;
+}
+
+.qty-control button:hover {
+    background-color: #aaa;
+}
+
+.qty-control .qty-input {
+    width: 35px; 
+    height: 30px; /* Smaller height */
+    font-size: 12px; /* Smaller font size */
+    text-align: center;
+    margin: 0;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box; /* Ensures padding and border are included in the width */
+}
+
 /* Responsive adjustments */
 
-@media (max-width: 980px) {
-    .specials-grid {
-        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); /* Responsive columns */
+/* For tablet and small desktop view */
+@media (max-width: 768px) {
+    .products-grid {
+        grid-template-columns: repeat(auto-fit, minmax(108px, 1fr)); /* Still 4 columns in a row */
         gap: 15px; /* Reduced gap for tablets */
     }
 }
 
-@media (max-width: 768px) {
-    .specials-grid {
-        grid-template-columns: repeat(auto-fit, minmax(111px, 1fr)); /* Responsive columns */
-        gap: 10px; /* Reduced gap for tablets */
-    }
-}
-
+/* For mobile view (480px and below) */
 @media (max-width: 480px) {
-    .specials-grid {
-        grid-template-columns: repeat(auto-fit, minmax(86px, 1fr)); /* Responsive columns */
-        gap: 11px; /* Further reduced gap for small mobile devices */
+    .products-grid {
+        grid-template-columns: repeat(auto-fit, minmax(90px, 2fr)); /* Adjust to 3 columns in a row */
+        gap: 11px; /* Reduced gap for small mobile devices */
     }
 
-    .special img {
-        height: 80px; /* Reduced image height for mobile */
+    .product img {
+        height: 90px; /* Reduced image height for mobile */
     }
 
-    .special h3 {
-        font-size: 0.9em; /* Reduced font size for mobile */
+    .product h3, .product h4 {
+        font-size: .9em; /* Reduced font size for mobile */
     }
 
-    .special button {
+    .product button {
         font-size: 0.7em; /* Slightly reduced button font size */
     }
+
+    .qty-control {
+        gap: 4px; /* Further reduced gap for small mobile devices */
+    }
+
+    .qty-control button {
+        width: 25px; /* Smaller buttons for mobile */
+        height: 25px;
+        font-size: 12px; /* Smaller font size for mobile */
+    }
+
+    .qty-control .qty-input {
+        width: 25px; /* Further reduced width for mobile */
+        height: 25px; /* Smaller height for mobile */
+        font-size: 10px; /* Smaller font size for mobile */
+    }
 }
 
+/* For very small mobile view (320px and below) */
 @media (max-width: 320px) {
-    .specials-grid {
-        grid-template-columns: repeat(auto-fit, minmax(68px, 1fr)); /* Responsive columns */
+    .products-grid {
+        grid-template-columns: repeat(auto-fit, minmax(65px, 1fr)); /* 3 columns in a row */
         gap: 8px; /* Reduced gap for very small screens */
     }
 
-    .special {
+    .product {
         padding: 5px; /* Reduced padding for very small screens */
     }
 
-    .special img {
-        height: 100px; /* Further reduced image height */
+    .product img {
+        height: 80px; /* Further reduced image height */
     }
 
-    .special h3 {
+    .product h3, .product h4 {
         font-size: 0.8em; /* Further reduced font size */
     }
 
-    .special button {
+    .product button {
         font-size: 0.8em; /* Further reduced button font size */
     }
+
+    .qty-control {
+        gap: 3px; /* Minimal gap for very small screens */
+    }
+
+    .qty-control button {
+        width: 20px; /* Further reduced button size for very small screens */
+        height: 20px;
+        font-size: 10px; /* Further reduced font size */
+    }
+
+    .qty-control .qty-input {
+        width: 20px; /* Further reduced input field size */
+        height: 20px; /* Further reduced height */
+        font-size: 8px; /* Further reduced font size */
+    }
 }
+
 
 
 
