@@ -128,137 +128,6 @@ h2 {
 
 
 
-/* Deals Section */
-
-
-.deal-list {
-    display: grid;
-    gap: 20px;
-    padding: 10px; /* Added padding for better spacing within the container */
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Responsive grid columns */
-}
-
-.deal-item {
-    background-color: #fff;
-    border-radius: 8px;
-    overflow: hidden;
-    text-align: center;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    padding: 15px;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between; /* Ensures content is evenly distributed */
-    height: 100%; /* Ensure all items have the same height */
-}
-
-.deal-item img {
-    max-width: 100%;
-    height: 120px;
-    border-bottom: 1px solid #e0e0e0;
-    margin-bottom: 15px;
-}
-
-.deal-item h3 {
-    font-size: 1.2em;
-    color: #333;
-    margin-bottom: 10px;
-}
-
-.deal-item p {
-    font-size: 1em;
-    color: #666;
-    margin-bottom: 15px;
-}
-
-.qty-controls {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-top: 10px;
-}
-
-.qty-controls button {
-    width: 30px;
-    height: 30px;
-    background-color: #ddd;
-    border: none;
-    font-size: 18px;
-    cursor: pointer;
-    transition: background-color 0.3s;
-}
-
-.qty-controls button:hover {
-    background-color: #ccc;
-}
-
-.qty-controls input {
-    width: 30px; /* Adjusted width for better visibility */
-    height: 30px;
-    text-align: center;
-    border: 1px solid #ddd;
-    margin: 0 5px;
-    font-size: 16px;
-    border-radius: 4px;
-}
-
-.btn-cart {
-    margin-top: 15px;
-    background-color: #28a745;
-    color: #fff;
-    padding: 10px;
-    border: none;
-    cursor: pointer;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    transition: background-color 0.3s;
-    font-size: 16px;
-    width: 40px;
-    height: 40px;
-    align-self: center; /* Center aligns the button */
-}
-
-.btn-cart i {
-    font-size: 16px;
-}
-
-.btn-cart:hover {
-    background-color: #218838;
-}
-
-@media (max-width: 767px) {
-    .deal-list {
-        grid-template-columns: repeat(3, 1fr); /* Adjusted to 2 columns for better spacing */
-    }
-
-    .btn-cart {
-        width: 35px;
-        height: 35px;
-        font-size: 14px;
-    }
-
-    .qty-con input {
-        width: 30px; /* Reduced width for better fit on smaller screens */
-    }
-
-    .qty-con button {
-        width: 25px; /* Reduced button size for better fit on smaller screens */
-        height: 25px;
-        font-size: 16px;
-    }
-}
-
-@media (min-width: 768px) {
-    .deal-list {
-        grid-template-columns: repeat(4, 1fr);
-       
-    }
-    
-}
-
-
-
-
 /* Image Section */
 
 .image-section {
@@ -281,146 +150,6 @@ h2 {
     object-fit: cover;
     border-radius: 8px;
 }
-
-
-
-/* special section  */
-
-
-
-
-
-
-
-
-.special-list {
-    display: grid;
-    gap: 20px;
-    padding: 10px; /* Added padding for better spacing within the container */
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Responsive grid columns */
-}
-
-.special-item {
-    background-color: #fff;
-    border-radius: 8px;
-    overflow: hidden;
-    text-align: center;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    padding: 15px;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between; /* Ensures content is evenly distributed */
-    height: 100%; /* Ensure all items have the same height */
-}
-
-.special-item img {
-    max-width: 100%;
-    height: 120px;
-    border-bottom: 1px solid #e0e0e0;
-    margin-bottom: 15px;
-}
-
-.special-item h3 {
-    font-size: 1.2em;
-    color: #333;
-    margin-bottom: 10px;
-}
-
-.special-item p {
-    font-size: 1em;
-    color: #666;
-    margin-bottom: 15px;
-}
-
-.qty-con {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-top: 10px;
-}
-
-.qty-con button {
-    width: 30px;
-    height: 30px;
-    background-color: #ddd;
-    border: none;
-    font-size: 18px;
-    cursor: pointer;
-    transition: background-color 0.3s;
-}
-
-.qty-con button:hover {
-    background-color: #ccc;
-}
-
-.qty-con input {
-    width: 40px; /* Adjusted width for better visibility */
-    height: 30px;
-    text-align: center;
-    border: 1px solid #ddd;
-    margin: 0 5px;
-    font-size: 16px;
-    border-radius: 4px;
-}
-
-.btn-cart {
-    margin-top: 15px;
-    background-color: #28a745;
-    color: #fff;
-    padding: 10px;
-    border: none;
-    cursor: pointer;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    transition: background-color 0.3s;
-    font-size: 16px;
-    width: 40px;
-    height: 40px;
-    align-self: center; /* Center aligns the button */
-}
-
-.btn-cart i {
-    font-size: 16px;
-}
-
-.btn-cart:hover {
-    background-color: #218838;
-}
-
-@media (max-width: 767px) {
-    .special-list {
-        grid-template-columns: repeat(3, 1fr); /* Adjusted to 2 columns for better spacing */
-    }
-
-    .btn-cart {
-        width: 35px;
-        height: 35px;
-        font-size: 14px;
-    }
-
-    .qty-con input {
-        width: 30px; /* Reduced width for better fit on smaller screens */
-    }
-
-    .qty-con button {
-        width: 25px; /* Reduced button size for better fit on smaller screens */
-        height: 25px;
-        font-size: 16px;
-    }
-}
-
-@media (min-width: 768px) {
-    .special-list {
-        grid-template-columns: repeat(4, 1fr);
-    }
-}
-
-
-
-
-
-
 
 
 
@@ -456,7 +185,7 @@ h2 {
     display: flex;
     flex-direction: column; /* Stack contents vertically */
     justify-content: space-between; /* Distribute space */
-    background: #fff; /* Background color for better contrast */
+  
     padding: 10px; /* Added padding for better spacing */
 }
 
@@ -2439,3 +2168,90 @@ body {
 
 
 
+/* review  */
+
+.testimonial-slider {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 50px;
+}
+
+.testimonial-wrapper {
+    display: flex;
+    transition: transform 0.5s ease;
+    
+}
+
+.testimonial-slide {
+    display: flex;
+    min-width: 100%;
+    
+}
+
+.testimonial-item {
+    flex: 1;
+    margin: 0 10px;
+    background-color: #5b6a5b;
+    padding: 20px;
+    border-radius: 10px;
+    color: rgb(16, 13, 13);
+    text-align: center;
+
+        background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSBoy6U_pucjRO9iiqhQINANwQbwZvA9LcDG64VRwUBZdV2qjQqkg07Sh4Lm91SYqTxI-4&usqp=CAU");
+background-size: cover;
+background-repeat: no-repeat;
+}
+
+.testimonial-item img {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    margin-bottom: 15px;
+}
+
+.testimonial-item h3 {
+    font-size: 1.2em;
+    margin-bottom: 5px;
+}
+
+.testimonial-item p {
+    font-size: 0.9em;
+    margin-bottom: 10px;
+}
+
+.testimonial-item blockquote {
+    font-style: italic;
+    margin-bottom: 15px;
+}
+
+.rating {
+    font-size: 1.2em;
+    color: #ffd700;
+}
+
+.prev, .next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    border: none;
+    padding: 10px;
+    color: white;
+    font-size: 1.5em;
+    cursor: pointer;
+    border-radius: 50%;
+}
+
+.prev {
+    left: 10px;
+}
+
+.next {
+    right: 10px;
+}
+
+  
+  
