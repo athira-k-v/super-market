@@ -2144,7 +2144,26 @@ body {
 
 
 
+/* carousal section */
 
+/* General carousel styles */
+.carousel-inner img {
+    width: 100%;
+    height: auto; /* Maintain aspect ratio */
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+    .carousel-inner img {
+        height: 40vh; /* Set height to a percentage of the viewport height for better scaling */
+    }
+}
+
+@media (max-width: 480px) {
+    .carousel-inner img {
+        height: 30vh; /* Increase height for very small screens */
+    }
+}
 
 
 
